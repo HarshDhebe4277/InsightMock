@@ -1,82 +1,139 @@
 # DSA InsightMock 💡
 
-Pattern-based DSA learning platform powered by **Google Gemini AI**. Transform your coding preparation from random problem-solving into a personalized, pattern-mastery roadmap with real-time AI interview practice.
+> **Pattern-based DSA learning platform powered by Groq AI.**
+> Transform your coding preparation from random problem-solving into a personalized, pattern-mastery roadmap with real-time AI interview practice.
+
+[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=Nl0Ge7nAqz8)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.0-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-11.1-ffca28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+  <img src="Screenshots\Dashboard.png" alt="Dashboard" width="800" />
+  <p><em>Dashboard</em></p>
+</div>
+
+<div align="center">
+  <img src="Screenshots\image.png" alt="Code Editor" width="800" />
+  <p><em>Problem Solving Interface</em></p>
+</div>
+
+<div align="center">
+  <img src="Screenshots\image copy.png" alt="AI Professor" width="800" />
+  <p><em>AI Real World Explanation</em></p>
+</div>
+
+<div align="center">
+  <img src="Screenshots\image copy 3.png" alt="AI Interviewer" width="800" />
+  <p><em>AI Real Time Interviewer</em></p>
+</div>
+
+---
 
 ## 🌟 Key Features
 
-- **🎯 Pattern Mastery Tracking**: Visual radar chart showing proficiency in algorithmic patterns (Sliding Window, DP, Two Pointers, Graph/Tree)
-- **⚡ Morning Sprint**: Personalized daily challenges targeting your weak patterns
-- **🤖 AI Technical Interviewer**: Post-submission chat overlay that asks intelligent follow-up questions about your solution
-- **💡 Smart Hints**: Context-aware hints from Gemini that analyze your code without spoiling the solution
-- **📊 Progress Analytics**: Track problems solved, interview readiness score, and pattern growth
-- **🔥 Spaced Repetition**: Ghost Revision system to revisit problems you struggled with
+- **🎯 Pattern Mastery Tracking**: Visual radar chart showing proficiency in algorithmic patterns (Sliding Window, DP, Two Pointers, Graph/Tree).
+- **⚡ Morning Sprint**: Personalized daily challenges targeting your weak patterns to keep you consistent.
+- **🤖 AI Technical Interviewer**: Post-submission chat overlay that asks intelligent follow-up questions about your solution (Time/Space complexity, edge cases). powered by **Groq**.
+- **💡 Smart Hints**: Context-aware hints from AI that analyze your code without giving away the full solution.
+- **🧠 Visual Analogies**: AI-generated real-world analogies to explain complex algorithm concepts simply.
+- **📊 Progress Analytics**: Track problems solved, interview readiness score, and pattern growth over time.
+- **🔥 Spaced Repetition**: "Ghost Revision" system to enhance long-term retention of difficult problems.
+
+---
 
 ## 🚀 Tech Stack
 
-- **Frontend**: React 18 + Vite
-- **Styling**: Custom CSS with Glassmorphism design
-- **Code Editor**: Monaco Editor (VS Code's editor)
-- **Charts**: Chart.js with React wrapper
-- **AI**: Google Gemini Pro via AI Studio
-- **Authentication**: Firebase Google Auth
-- **Database**: Firestore for user profiles and progress
+### Frontend
+- **Framework**: [React 18](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: React Router v6
+- **State Management**: Context API
 - **Animations**: Framer Motion
-- **Router**: React Router v6
 
-## 📦 Installation
+### UI & Styling
+- **Styling**: Custom CSS with Glassmorphism design system
+- **Editor**: [Monaco Editor](https://microsoft.github.io/monaco-editor/) (VS Code's editor engine)
+- **Charts**: Chart.js with `react-chartjs-2`
+- **Icons**: React Icons / Lucide
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd V1
-   ```
+### Backend & Services
+- **Authentication**: Firebase Authentication (Google Sign-In)
+- **Database**: Firebase Firestore (User profiles, progress tracking)
+- **AI Engine**: [Groq Cloud](https://groq.com/) (Llama 3 / Mixtral) using `@langchain/groq`
+- **Code Execution**: Piston API (Remote Code Execution Engine)
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+---
 
-3. **Set up Firebase** (see `FIREBASE_SETUP.md` for detailed instructions)
-   - Create a Firebase project
-   - Enable Google Authentication
-   - Enable Firestore Database
-   - Get your Firebase config
+## 📦 Installation & Setup
 
-4. **Configure environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Then edit `.env` and add your keys:
-   ```env
-   VITE_GEMINI_API_KEY=your_gemini_api_key
-   VITE_FIREBASE_API_KEY=your_firebase_api_key
-   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-   VITE_FIREBASE_APP_ID=your_app_id
-   ```
+Follow these steps to set up the project locally.
 
-5. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- A Firebase Project
+- A Groq Cloud API Key
 
-6. **Open your browser** at `http://localhost:5173`
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/dsa-insightmock.git
+cd V1
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory by copying the example:
+
+```bash
+cp .env.example .env
+```
+
+**Edit `.env` and fill in your API keys:**
+
+```env
+# Groq AI Configuration (Get key from https://console.groq.com)
+VITE_GROQ_API_KEY=your_groq_api_key_here
+
+# Firebase Configuration (Get from Firebase Console -> Project Settings)
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+
+Open your browser and visit `http://localhost:5173` to see the app!
+
+---
 
 ## 🎯 Usage Flow
 
-1. **Sign In**: Click "Sign in with Google" on the login page
-2. **Dashboard**: View your Morning Sprint with 2 personalized problems
-3. **Solve**: Click a problem to open the code editor
-4. **Code**: Write your solution in Python, C++, or Java
-5. **Run**: Test your code with sample test cases
-6. **Submit**: Submit when all tests pass
-7. **Interview**: AI Interviewer appears with a follow-up question
-8. **Explain**: Type your explanation about time/space complexity
-9. **Feedback**: Receive a star rating and constructive feedback
-10. **Grow**: Watch your Mastery Map update in real-time!
+1. **Sign In**: Use Google Sign-In to create your profile.
+2. **Dashboard**: Check your "Mastery Map" and start your "Morning Sprint".
+3. **Solve**: Select a problem. Use the **Monaco Editor** to write your solution (Python, C++, Java).
+4. **Run & Test**: Hit "Run Code" to execute against test cases via the Piston engine.
+5. **Get Help**: Stuck? Click **"Smart Hint"** for a nudge, or **"Visual Explanation"** for a concept breakdown.
+6. **Submit**: Once all tests pass, submit your code.
+7. **Interview**: The **AI Interviewer** will pop up to challenge your solution. Answer its questions!
+8. **Growth**: Your mastery score updates instantly based on performance.
+
+---
 
 ## 🏗️ Project Structure
 
@@ -84,99 +141,43 @@ Pattern-based DSA learning platform powered by **Google Gemini AI**. Transform y
 V1/
 ├── src/
 │   ├── components/
-│   │   ├── ui/              # Reusable UI components (Button, Card, Badge)
-│   │   ├── layout/          # Layout components (Navbar)
-│   │   ├── dashboard/       # Dashboard-specific components
-│   │   ├── editor/          # Code editor components
-│   │   └── interviewer/     # AI Interviewer chat overlay
-│   ├── contexts/            # React contexts (AuthContext)
-│   ├── pages/               # Page components (Login, Dashboard, CodeEditor)
-│   ├── services/            # API integrations (Firebase, Gemini, Firestore)
-│   ├── data/                # Mock data (problems.json)
-│   ├── styles/              # Global styles
-│   ├── App.jsx              # Main app component with routing
-│   └── main.jsx             # Entry point
+│   │   ├── ui/              # Reusable atoms (Button, Badge, Card)
+│   │   ├── layout/          # Navbar, Layout wrappers
+│   │   ├── dashboard/       # Dashboard widgets (PatternChart, StatCard)
+│   │   ├── editor/          # Code editor & Console
+│   │   └── interviewer/     # AI Chat Interface
+│   ├── contexts/            # AuthContext, ThemeContext
+│   ├── pages/               # Main Views (Login, Dashboard, CodeEditor)
+│   ├── services/            # APIs (Firebase, Groq, CodeExecution)
+│   ├── data/                # Static/Mock data (problems.json)
+│   └── styles/              # Global CSS variables & resets
 ├── public/                  # Static assets
-├── .env.example             # Environment variables template
-├── FIREBASE_SETUP.md        # Firebase setup guide
-└── README.md                # This file
+└── ...config files
 ```
-
-## 🎨 Design Philosophy
-
-- **Glassmorphism**: Modern frosted glass effects for cards and overlays
-- **Dark Theme**: Eye-friendly dark mode with vibrant accent colors
-- **Smooth Animations**: Framer Motion for delightful micro-interactions
-- **Gradient Accents**: Beautiful gradients for CTAs and highlights
-- **Responsive**: Mobile-friendly design (though optimized for desktop coding)
-
-## 🤖 Google Technologies Used
-
-| Technology | Purpose |
-|------------|---------|
-| **Google Gemini (AI Studio)** | Generates context-aware hints, interview questions, and evaluates explanations |
-| **Firebase Authentication** | Secure Google Sign-In for user management |
-| **Firestore Database** | Stores user profiles, mastery maps, and problem attempt history |
-
-## 📊 Data Model
-
-### User Profile (Firestore)
-```javascript
-{
-  uid: string,
-  email: string,
-  displayName: string,
-  photoURL: string,
-  masteryMap: {
-    'Sliding Window': 45,
-    'Two Pointers': 30,
-    'Dynamic Programming': 60,
-    'Tree/Graph': 50,
-    'Greedy': 35
-  },
-  problemsAttempted: [...],
-  problemsSolved: [...],
-  interviewReadinessScore: 72,
-  createdAt: timestamp,
-  lastLogin: timestamp
-}
-```
-
-## 🐛 Troubleshooting
-
-**"Firebase: Error (auth/unauthorized-domain)"**
-- Add `localhost` to authorized domains in Firebase Console
-
-**Gemini API errors**
-- Check that your API key is set correctly in `.env`
-- Ensure you're using the free tier within limits
-
-**Monaco Editor not loading**
-- Clear browser cache and restart dev server
-
-## 🚀 Deployment
-
-```bash
-npm run build
-```
-
-The optimized production build will be in the `dist/` folder.
-
-## 📝 License
-
-MIT License - feel free to use this for your hackathon project!
-
-## 👥 Credits
-
-Built for **GDG Vesit TechSprint** hackathon.
-
-Powered by:
-- Google Gemini AI
-- Firebase
-- Monaco Editor
-- Chart.js
-- Framer Motion
 
 ---
 
-**Made with ❤️ and lots of ☕**
+## 🐛 Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| **Firebase Auth Error** | Ensure `localhost` is added to "Authorized Domains" in Firebase Console. |
+| **"API Key Missing"** | Check your `.env` file. Restart the Vite server after changing `.env`. |
+| **Monaco Editor issues** | Refresh the page. Ensure hardware acceleration is on if scrolling is laggy. |
+| **Execution Failed** | The Piston API might be rate-limited. Wait a moment and try again. |
+
+---
+
+## 👥 Credits
+
+Built for **GDG Vesit TechSprint** Hackathon.
+
+**Team Members:**
+- Team Origin ( Harsh, Sahil, Dhruv, Shraddha )
+
+**Powered By:**
+- [Groq](https://groq.com/) for lightning-fast AI inference.
+- [Firebase](https://firebase.google.com/) for serverless infrastructure.
+
+---
+
