@@ -1,0 +1,123 @@
+:root {
+  /* --- CORE PALETTE --- */
+  --bg-primary: #000000;
+  /* True Black */
+  --bg-secondary: #0a0a0a;
+  /* Very Dark Gray for panels */
+  --bg-tertiary: #141414;
+  /* Slightly lighter for inputs/headers */
+
+  /* Accent Colors */
+  --primary: #FF5E00;
+  /* Vibrant Orange */
+  --primary-hover: #ff7b00;
+  --primary-glow: rgba(255, 94, 0, 0.4);
+
+  --success: #00fa9a;
+  /* Medium Spring Green */
+  --success-glow: rgba(0, 250, 154, 0.3);
+
+  --error: #ff3333;
+  --warning: #ffcc00;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #525252;
+
+  /* Borders */
+  --border-light: #262626;
+  --border-active: #404040;
+
+  /* Aliases for compatibility */
+  --border-color: var(--border-light);
+  --color-primary: var(--primary);
+  --color-success: var(--success);
+  --color-error: var(--error);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Effects */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px var(--primary-glow);
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+
+  --bg-glass: rgba(20, 20, 20, 0.8);
+  --bg-glass-hover: rgba(30, 30, 30, 0.9);
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+select {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  font-family: inherit;
+}
+
+/* Utilities */
+.text-orange {
+  color: var(--primary);
+}
+
+.text-green {
+  color: var(--success);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}

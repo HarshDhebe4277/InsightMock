@@ -1,0 +1,25 @@
+.mastery-map-card {
+    padding: var(--spacing-lg);
+}
+
+.mastery-map-header {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.mastery-map-header h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.mastery-map-header p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.mastery-map-chart {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
