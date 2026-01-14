@@ -4,7 +4,6 @@
 > Transform your coding preparation from random problem-solving into a personalized, pattern-mastery roadmap with real-time AI interview practice.
 
 [![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=Nl0Ge7nAqz8)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![React](https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase-11.1-ffca28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
